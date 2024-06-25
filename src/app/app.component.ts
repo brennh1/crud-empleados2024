@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'crud-empleados';
+  msg='';
 
   empleados=[
     {name:'Hugo', position:'Programador Jr.',salary:10000,age:15,sex:'M',email:'hun@gmail.com'},
@@ -23,6 +24,7 @@ export class AppComponent {
     this.empleados.push(this.modelo);
     this.modelo={};
     console.log(this.empleados);
+    this.msg='Empleado agregado';
 
   }
   
@@ -41,6 +43,7 @@ export class AppComponent {
     this.modelo2.salary=this.empleados[1].salary;
     this.modelo2.sex=this.empleados[1].sex;
     this.modelo2.email=this.empleados[1].email;
+    this.myValue=1
   }
   updateEmpleado():void{
     //Permite actualizar un empleado en el arreglo de empleados
